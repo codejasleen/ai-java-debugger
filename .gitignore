@@ -9,13 +9,18 @@ __pycache__/
 # Environment variables
 .env
 
-# FAISS index files (optional – regenerate anytime)
+# FAISS index & vector DB (rebuildable)
 *.index
-data/knowledge_chunks.pkl
+*.pkl
+data/
+
+# Model weights / transformers
+*.safetensors
+*.bin
+
+# HuggingFace cache
+.cache/
 
 # OS files
 .DS_Store
 Thumbs.db
-
-# HuggingFace cache
-.cache/
