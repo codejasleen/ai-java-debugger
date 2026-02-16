@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# FAISS index files (optional – regenerate anytime)
+*.index
+data/knowledge_chunks.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# HuggingFace cache
+.cache/

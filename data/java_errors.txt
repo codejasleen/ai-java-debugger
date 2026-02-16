@@ -1,0 +1,32 @@
+NullPointerException occurs when trying to use an object reference that has not been initialized.
+
+IndexOutOfBoundsException happens when accessing an array or list index that is outside valid range.
+
+ClassNotFoundException occurs when the JVM cannot locate a class definition at runtime.
+
+SQLException may occur due to invalid queries, connection failures, or incorrect database configurations.
+
+NumberFormatException occurs when attempting to convert a string to a numeric type but the string format is invalid.
+
+IllegalArgumentException is thrown when a method receives an inappropriate argument.
+
+This becomes your first knowledge base.
+NullPointerException often occurs when dependency injection fails in Spring applications.
+
+IndexOutOfBoundsException may happen when iterating lists incorrectly inside loops.
+
+ClassNotFoundException can occur when classpath is not configured correctly.
+
+SQLException may result from incorrect database credentials or malformed queries.
+
+ConcurrentModificationException occurs when modifying a collection while iterating over it.
+
+FileNotFoundException happens when attempting to access a file that does not exist.
+
+ArithmeticException may occur during division by zero.
+
+IllegalStateException occurs when a method is invoked at an illegal or inappropriate time.
+
+UnsupportedOperationException happens when an operation is not supported by the object.
+
+StackOverflowError occurs due to deep or infinite recursion.
