@@ -4,5 +4,11 @@
     "root_cause": "Modifying a collection while iterating over it",
     "fix": "Create a temporary copy of the list",
     "confidence": true
+  },
+  {
+    "error": "nullpointerexception\n",
+    "root_cause": "Object reference not initialized",
+    "fix": "Check for null before using",
+    "confidence": true
   }
 ]
