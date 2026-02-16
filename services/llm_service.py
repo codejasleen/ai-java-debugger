@@ -5,6 +5,7 @@ from services.agent_error_analyst import analyze_error
 from services.agent_retrieval_strategist import plan_retrieval
 from services.agent_fix_generator import generate_fix
 from services.agent_solution_validator import validate_solution
+from services.memory_service import search_memory, add_to_memory
 
 client = Groq(api_key=GROQ_API_KEY)
 
@@ -16,6 +17,25 @@ def load_prompt():
 
 def get_debug_response(java_error: str):
     system_prompt = load_prompt()
+
+    # STEP 0 — Check memory first
+    memory_result = search_memory(java_error)
+
+    if memory_result:
+        print("\nMEMORY HIT FOUND:\n", memory_result)
+        return {
+            "solution": {
+                "root_cause": memory_result["root_cause"],
+                "recommended_fix": memory_result["fix"],
+                "quick_steps": ["Previously solved similar error — apply stored fix"],
+                "fix_options": []
+            },
+            "validation": {
+                "valid_root_cause": True,
+                "fix_is_correct": True,
+                "notes": "Reused from memory"
+            }
+        }
 
     # STEP 1 — Error Analyst Agent
     analysis = analyze_error(java_error)
@@ -54,7 +74,11 @@ Keywords: {expanded_keywords}
 
     print("\nVALIDATION RESULT:\n", validation)
 
+    # STEP 7 — Save to memory
+    add_to_memory(java_error, fix_output, validation)
+
     return {
         "solution": fix_output,
         "validation": validation
     }
+

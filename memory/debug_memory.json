@@ -1,0 +1,8 @@
+[
+  {
+    "error": "ConcurrentModificationException in ArrayList loop",
+    "root_cause": "Modifying a collection while iterating over it",
+    "fix": "Create a temporary copy of the list",
+    "confidence": true
+  }
+]
