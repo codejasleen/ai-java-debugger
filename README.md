@@ -187,7 +187,31 @@ GROQ_API_KEY=your_key_here
 python app.py  
 
 ---
+## 🚀 Deployment
 
+This project is deployed on AWS EC2 and runs as a background service using **systemd**, making the API publicly accessible and always available.
+
+---
+
+### 🌐 Live API
+
+Access the running backend:
+http://EC2-PUBLIC-IP:8000/docs
+
+---
+
+### ⚙️ Deployment Architecture
+
+- **Cloud:** AWS EC2 (Ubuntu)
+- **API Framework:** FastAPI
+- **Server:** Uvicorn
+- **Process Manager:** systemd
+- **Vector DB:** FAISS
+- **Embeddings:** sentence-transformers
+- **Reranker:** cross-encoder
+- **LLM:** Groq / OpenAI API
+
+---
 ## 📌 Future Improvements
 
 - Streamlit UI  
