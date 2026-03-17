@@ -196,7 +196,7 @@ This project is deployed on AWS EC2 and runs as a background service using **sys
 ### 🌐 Live API
 
 Access the running backend:
-http://EC2-PUBLIC-IP:8000/docs
+http://16.171.227.186:8000/docs
 
 ---
 
